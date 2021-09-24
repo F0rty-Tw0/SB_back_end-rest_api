@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Setter
 @Getter
 @Entity
-@Table(name = "payments", schema = "swc3_springboot")
+@Table(name = "payments", schema = "products_shop")
 public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

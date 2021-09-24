@@ -1,18 +1,27 @@
 package back_end.rest_api.Entities.Invoice;
 
+import org.hibernate.annotations.GenericGenerator;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import java.time.LocalDate;
 
+@EqualsAndHashCode
 @Setter
 @Getter
-@EqualsAndHashCode
 @Entity
-@Table(name = "invoices", schema = "swc3_springboot")
+@Table(name = "invoices", schema = "products_shop")
 public class Invoice {
 
     @Id

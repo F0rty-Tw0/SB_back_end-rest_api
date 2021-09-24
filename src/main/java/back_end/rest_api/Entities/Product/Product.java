@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Setter
 @Getter
 @Entity
-@Table(name = "products", schema = "swc3_springboot")
+@Table(name = "products", schema = "products_shop")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

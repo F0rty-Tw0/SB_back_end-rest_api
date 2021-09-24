@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @EqualsAndHashCode
-@Table(name = "product_ratings", schema = "swc3_springboot")
+@Table(name = "product_ratings", schema = "products_shop")
 public class ProductRating {
     @EmbeddedId
     @AttributeOverrides({ @AttributeOverride(name = "customerId", column = @Column(name = "customer_id")),

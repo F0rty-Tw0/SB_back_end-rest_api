@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 
 @Entity
-@Table(name = "tutorials", schema = "swc3_springboot")
+@Table(name = "tutorials", schema = "products_shop")
 public class Tutorial {
 
     // if we want batch inserts and updates we need to use SEQUENCE which is not

@@ -1,16 +1,22 @@
 package back_end.rest_api.Entities.Order;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
-
+@EqualsAndHashCode
 @Setter
 @Getter
-@EqualsAndHashCode
 @Entity
-@Table(name = "order_statuses", schema = "swc3_springboot")
+@Table(name = "order_statuses", schema = "products_shop")
 public class OrderStatus {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

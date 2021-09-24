@@ -9,10 +9,10 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 @Setter
-@EqualsAndHashCode
 @Getter
 @Entity
-@Table(name = "customers", schema = "swc3_springboot")
+@EqualsAndHashCode
+@Table(name = "customers", schema = "products_shop")
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")

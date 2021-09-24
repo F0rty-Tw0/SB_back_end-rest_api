@@ -4,15 +4,24 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
+import java.beans.Transient;
 import java.time.LocalDate;
 import java.util.Collection;
+
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @EqualsAndHashCode
 @Setter
 @Getter
 @Entity
-@Table(name = "orders", schema = "swc3_springboot")
+@Table(name = "orders", schema = "products_shop")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,7 +56,7 @@ public class Order {
     @OneToMany(mappedBy = "ordersByOrderId")
     private Collection<OrderItem> orderItems;
 
-    // Hibernate will ignore this field
+    // Hibernate will ignore this fields
     @Transient
     public Double getTotalOrderPrice() {
         double sum = 0;

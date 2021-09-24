@@ -15,7 +15,7 @@ import java.sql.Date;
 @EqualsAndHashCode
 @Entity
 @Immutable // so that we cannot change data through this class
-@Table(name = "shipped_orders", schema = "swc3_springboot") // @Table but it is a view
+@Table(name = "shipped_orders", schema = "products_shop") // @Table but it is a view
 public class ShippedOrder {
 
     @Basic
