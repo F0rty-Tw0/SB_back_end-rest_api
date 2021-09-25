@@ -1,17 +1,24 @@
 package back_end.rest_api.Entities.User;
 
-import javax.persistence.*;
 import java.sql.Date;
+
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
+@EqualsAndHashCode
 @Setter
 @Getter
 @Entity
-@EqualsAndHashCode
 @Table(name = "customers", schema = "products_shop")
 public class Customer {
     @Id

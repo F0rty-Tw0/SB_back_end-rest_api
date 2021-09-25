@@ -4,7 +4,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.beans.Transient;
 import java.time.LocalDate;
 import java.util.Collection;
 
@@ -16,6 +15,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @EqualsAndHashCode
 @Setter
@@ -60,8 +60,8 @@ public class Order {
     @Transient
     public Double getTotalOrderPrice() {
         double sum = 0;
-        for (OrderItem oi : getOrderItems()) {
-            sum += oi.getTotalPrice();
+        for (OrderItem orderItem : getOrderItems()) {
+            sum += orderItem.getTotalPrice();
         }
         return sum;
     }
@@ -69,8 +69,8 @@ public class Order {
     @Transient
     public int getProductsNumber() {
         int sum = 0;
-        for (OrderItem oi : getOrderItems()) {
-            sum += oi.getQuantity();
+        for (OrderItem orderItem : getOrderItems()) {
+            sum += orderItem.getQuantity();
         }
         return sum;
     }

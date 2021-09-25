@@ -5,14 +5,19 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Immutable;
 
-import javax.persistence.*;
 import java.sql.Date;
+
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 //mapping a view
 
+@EqualsAndHashCode
 @Setter
 @Getter
-@EqualsAndHashCode
 @Entity
 @Immutable // so that we cannot change data through this class
 @Table(name = "shipped_orders", schema = "products_shop") // @Table but it is a view

@@ -9,10 +9,10 @@ import javax.persistence.Embeddable;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
-@Setter
-@Getter
 @EqualsAndHashCode
 @NoArgsConstructor
+@Setter
+@Getter
 @Embeddable
 public class ProductRatingPK implements Serializable {
 

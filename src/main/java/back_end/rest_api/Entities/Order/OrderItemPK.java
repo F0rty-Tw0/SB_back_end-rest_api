@@ -8,9 +8,9 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
 
+@EqualsAndHashCode
 @Setter
 @Getter
-@EqualsAndHashCode
 public class OrderItemPK implements Serializable {
 
     @Column(name = "order_id", nullable = false)

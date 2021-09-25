@@ -1,14 +1,23 @@
 package back_end.rest_api.Entities;
 
-import lombok.*;
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 //lombok project - replace equals, hashCode, setters, getters, noArgsConstructor with these annotations:
 @EqualsAndHashCode
+@NoArgsConstructor
 @Setter
 @Getter
-@NoArgsConstructor
-
 @Entity
 @Table(name = "tutorials", schema = "products_shop")
 public class Tutorial {

@@ -1,15 +1,21 @@
 package back_end.rest_api.Entities.Product;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
-
+@EqualsAndHashCode
 @Getter
 @Setter
 @Entity
-@EqualsAndHashCode
 @Table(name = "product_ratings", schema = "products_shop")
 public class ProductRating {
     @EmbeddedId
